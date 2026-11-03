@@ -10,7 +10,7 @@ categories:
 #coverImage: "/images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
 #coverWidth: 16
 #coverHeight: 9
-excerpt:
+excerpt: Updates on JAM and associated technologies. 
 ---
 
 Since the [JAM competition](https://jam.web3.foundation/) was announced many of the 43 teams have made significant progress to delivering their respective JAM implementations. So, we created this site so all competing teams can share their progress updates.
