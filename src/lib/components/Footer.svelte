@@ -1,5 +1,5 @@
 <script>
-	import { siteAuthor } from '$lib/config';
+	import { siteTitle } from '$lib/config';
 	import NavItems from './NavItems.svelte';
 </script>
 
@@ -18,5 +18,5 @@
 		<NavItems />
 	</nav>
 
-	<p>&copy;{new Date().getFullYear()} {siteAuthor}</p>
+	<p>&copy;{new Date().getFullYear()} {siteTitle}</p>
 </footer>

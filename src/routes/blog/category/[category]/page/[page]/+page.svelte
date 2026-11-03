@@ -26,7 +26,7 @@
 	<h1>
 		Category: {category}
 		<br />
-		<small>Posts {lowerBound}–{upperBound} of {totalPosts}</small>
+		<small class="page-subtitle">Posts {lowerBound}–{upperBound} of {totalPosts}</small>
 	</h1>
 	<Pagination currentPage={page} {totalPosts} path="/blog/category/{category}/page" />
 
@@ -34,7 +34,7 @@
 
 	<Pagination currentPage={page} {totalPosts} path="/blog/category/{category}/page" />
 {:else}
-	<h1>Oops!</h1>
+	<h1 class="page-title">Oops!</h1>
 
 	<p>Sorry, no posts to show here.</p>
 

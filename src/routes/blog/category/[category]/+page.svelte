@@ -21,7 +21,7 @@
 </svelte:head>
 
 
-<h1>Blog category: {category}</h1>
+<h1 class="page-title">Category: {category}</h1>
 
 {#if posts.length}
 	<PostsList posts={posts} />

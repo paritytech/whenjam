@@ -6,24 +6,36 @@ code {
 }
 
 pre {
-	overflow-y: auto;
-	color: var(--paper);
-	background: var(--darker);
-	padding: 1rem;
-	font-size: 0.8rem;
+	overflow-x: auto;
+	color: var(--ink);
+	background: var(--paper-sunk);
+	border: 1px solid var(--rule-soft);
+	padding: 1rem 1.25rem;
+	font-size: 0.8125rem;
+	line-height: 1.6;
+	margin: 2rem 0;
+	text-indent: 0;
+	text-align: left;
 }
 
 code {
-	color: var(--darker);
-	font-size: 1rem;
-	padding: .125em .25em;
-	border-radius: 4px;
-	background: var(--lighterAccent);
-	white-space: pre;
+	color: var(--ink-strong);
+	font-size: 0.875em;
+	padding: 0.125em 0.3em;
+	border-radius: 2px;
+	background: rgba(255, 255, 255, 0.07);
+	white-space: pre-wrap;
 }
 
 pre code {
 	padding: 0;
 	background: transparent;
-	font-size: 0.8rem;
+	font-size: inherit;
+	white-space: pre;
+}
+
+/* Long-form prose shouldn't inherit justified/indented styling inside code */
+.post :where(pre, code) {
+	text-indent: 0;
+	hyphens: none;
 }

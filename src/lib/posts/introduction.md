@@ -17,6 +17,6 @@ Since the [JAM competition](https://jam.web3.foundation/) was announced many of 
 
 In addition we also wanted to share progress on the associated foundational technologies:
 
-- [CoreVM]() --- CoreVM acts as an engine inside JAM that allows ordinary programs to execute within isolated virtual machines.
-- [Polkadot Virtual Machine (PVM)](https://wiki.polkadot.com/learn/learn-jam-chain/#polkadot-virtual-machine-pvm) --- 
-- [Parachain Service](https://github.com/paritytech/parachain-service) --- The parachain service lets you run Polkadot parachains on JAM (instead of being backed using the Polkadot Relay Chain).
+- CoreVM - CoreVM acts as an engine inside JAM that allows ordinary programs to execute within isolated virtual machines.
+- [Polkadot Virtual Machine (PVM)](https://wiki.polkadot.com/learn/learn-jam-chain/#polkadot-virtual-machine-pvm) - A fast and secure RISC-V based virtual machine.
+- [Parachain Service](https://github.com/paritytech/parachain-service) - The parachain service lets you run Polkadot parachains on JAM (instead of being backed using the Polkadot Relay Chain).

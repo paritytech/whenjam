@@ -11,6 +11,18 @@
 	let coverHeight = $derived(data.meta.coverHeight);
 	let categories = $derived(data.meta.categories);
 	let PostContent = $derived(data.PostContent);
+
+	/** Formats a frontmatter date as day/month/year. */
+	const formatDate = (value) => {
+		if (!value) return '';
+		const parsed = new Date(value);
+		if (Number.isNaN(parsed.getTime())) return value;
+		const day = String(parsed.getDate()).padStart(2, '0');
+		const month = String(parsed.getMonth() + 1).padStart(2, '0');
+		return `${day}/${month}/${parsed.getFullYear()}`;
+	};
+
+	let showUpdated = $derived(updated && updated !== date);
 </script>
 
 <svelte:head>
@@ -29,31 +41,32 @@
 </svelte:head>
 
 <article class="post">
-	<!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
-	<img
-		class="cover-image"
-		src={coverImage}
-		alt=""
-		style="aspect-ratio: {coverWidth} / {coverHeight};"
-		width={coverWidth}
-		height={coverHeight}
-	/>
+	{#if coverImage}
+		<!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
+		<img
+			class="cover-image"
+			src={coverImage}
+			alt=""
+			style="aspect-ratio: {coverWidth} / {coverHeight};"
+			width={coverWidth}
+			height={coverHeight}
+		/>
+	{/if}
 
 	<h1>{title}</h1>
 
 	<div class="meta">
-		<b>Published:</b>
-		{date}
-		<br />
-		<b>Updated:</b>
-		{updated}
+		<time datetime={date}>{formatDate(date)}</time>
+		{#if showUpdated}
+			<span> · Updated {formatDate(updated)}</span>
+		{/if}
 	</div>
 
 	<PostContent />
 
 	{#if categories}
 		<aside class="post-footer">
-			<h2>Posted in:</h2>
+			<h2>Filed under</h2>
 			<ul class="post-footer__categories">
 				{#each categories as category}
 					<li>

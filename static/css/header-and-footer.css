@@ -1,15 +1,11 @@
 header,
 footer {
-	font-family: var(--primaryFont);
-	padding: 2.5rem 2rem;
+	font-family: var(--displayFont);
+	padding: 0.75rem 1.5rem;
 }
 
 :where(header, footer) a {
 	text-decoration: none;
-
-	&.active {
-		font-weight: bold;
-	}
 }
 
 :where(header, footer) nav ul {
@@ -17,67 +13,75 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 0rem 1.5rem;
+	gap: 0 2rem;
 	padding: 0;
 	margin: 0;
 }
 
-:where(header, footer) a:hover {
-	text-decoration: underline;
+:where(header, footer) nav li {
+	margin: 0;
 }
 
 :where(header, footer) svg {
 	fill: currentColor;
 }
 
+/**
+ * Header — a sticky, translucent bar over the paper, like graypaper.com's.
+ */
 header {
-	background: var(--lightAccent);
-	color: var(--darker);
+	position: sticky;
+	top: 0;
+	z-index: 50;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-}
-
-@media (min-width: 48rem) {
-	header {
-		justify-content: center;
-		flex-wrap: wrap;
-		height: auto;
-	}
+	justify-content: space-between;
+	gap: 1rem;
+	min-height: var(--header-height);
+	background: rgba(0, 0, 0, 0.13);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border-bottom: 1px solid var(--rule-soft);
+	font-size: 0.75rem;
+	letter-spacing: 0.01em;
 }
 
 .site-title {
-	font-family: var(--accentFont);
-	font-size: 2.1rem;
+	font-family: var(--displayFont);
+	font-size: 0.8125rem;
+	font-weight: 500;
 	line-height: 1;
-	color: inherit;
-	text-align: center;
+	letter-spacing: 0.04em;
+	color: var(--ink-strong);
 	margin: 0;
-	display: block;
-	font-size: 1.4rem;
-	font-weight: bold;
-
-	@media (min-width: 48rem) {
-		width: 100%;
-		font-size: 1.6rem;
-	}
+	white-space: nowrap;
 }
 
-.menu-button {
-	margin: 0;
-	background: transparent !important;
-	color: inherit;
-	padding: 0;
-	border: 0;
-	width: 2rem;
+.site-title:hover {
+	color: var(--accent);
 }
 
-@media (min-width: 48rem) {
-	.menu-button {
-		display: none;
-	}
+header .main-nav {
+	display: none;
 }
 
+header .main-nav a {
+	color: var(--accent);
+}
+
+header .main-nav a:hover {
+	color: var(--ink-strong);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.25em;
+}
+
+header .main-nav a.active {
+	color: var(--ink-strong);
+	font-weight: 500;
+}
+
+/* Mobile: the nav becomes a full-screen overlay */
 .main-nav {
 	position: fixed;
 	z-index: 2;
@@ -92,8 +96,10 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: var(--darker);
-	color: var(--paper);
+	background: var(--paper-sunk);
+	background-image: url('/images/paper-texture.svg');
+	background-size: 300px 300px;
+	color: var(--ink);
 	transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
@@ -112,6 +118,13 @@ header {
 
 .main-nav a {
 	color: inherit;
+	font-size: 1rem;
+	letter-spacing: 0.02em;
+}
+
+.main-nav.open ul {
+	flex-direction: column;
+	gap: 1.5rem;
 }
 
 .main-nav li:nth-of-type(1) {
@@ -147,60 +160,45 @@ header {
 }
 
 .menu-button {
-	position: absolute;
-	top: 2rem;
-	right: 2rem;
+	margin: 0;
+	background: transparent !important;
+	color: var(--ink-muted);
+	padding: 0;
+	border: 0;
+	width: 1.5rem;
+	height: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.main nav ul li {
-	font-size: 1.2rem;
-	display: block;
-	width: 100%;
-	text-align: center;
-	margin-bottom: calc(0.2rem + 2vh);
+/* The starter's SVGs carry only a viewBox, so give them an explicit size */
+.menu-button svg {
+	width: 1.125rem;
+	height: 1.125rem;
 }
 
-@media (min-width: 48rem) {
+.menu-button:hover {
+	color: var(--ink-strong);
+}
+
+@media (min-width: 40rem) {
+	header {
+		justify-content: space-between;
+		padding: 0.75rem 2rem;
+	}
+
 	header .main-nav {
+		display: block;
+		position: static;
 		opacity: 1;
 		transform: none;
-		position: unset;
 		height: auto;
 		width: auto;
-		background: unset;
+		background: none;
 		pointer-events: unset;
 		visibility: unset;
 		color: inherit;
-	}
-
-	header .main-nav ul {
-		margin: 1rem auto 0;
-		padding-top: 0.5rem;
-		border-top: 1px solid var(--dark);
-		width: max-content;
-	}
-
-	header .main-nav li {
-		font-size: inherit;
-		display: initial;
-		width: initial;
-		text-align: initial;
-		margin-bottom: 0;
-	}
-}
-
-footer {
-	background: var(--darker);
-	color: var(--paper);
-	display: grid;
-	grid-template-columns: 100%;
-	align-items: stretch;
-	gap: 2rem;
-}
-
-@media (min-width: 48rem) {
-	footer {
-		grid-template-columns: 1fr 1fr 2fr;
 	}
 
 	.menu-button {
@@ -208,31 +206,41 @@ footer {
 	}
 }
 
-footer p {
-	margin: 0;
-	font-size: 0.8rem;
+/* Footer */
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 1rem 2rem;
+	padding: 1.5rem;
+	border-top: 1px solid var(--rule);
+	font-size: 0.6875rem;
+	letter-spacing: 0.04em;
+	color: var(--ink-faint);
+}
+
+footer nav a {
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+footer nav ul {
+	justify-content: flex-start;
+	gap: 0 1.25rem;
 }
 
 footer a {
-	color: inherit;
+	color: var(--ink-muted);
 }
 
-footer nav {
-	display: initial;
+footer a:hover {
+	color: var(--accent);
 }
 
-@media (min-width: 48rem) {
-	footer nav {
-		border-right: 1px solid var(--dark);
-	}
-}
-
-footer ul {
-	display: initial;
-}
-
-footer ul li + li {
-	margin-top: 0.5rem;
+footer p {
+	margin: 0;
+	font-size: inherit;
 }
 
 .skip-to-content-link {
@@ -245,8 +253,8 @@ footer ul li + li {
 	justify-content: center;
 	align-items: center;
 	height: 3rem;
-	background: var(--darker);
-	color: var(--background);
+	background: var(--paper-sunk);
+	color: var(--ink);
 }
 
 .skip-to-content-link:focus {

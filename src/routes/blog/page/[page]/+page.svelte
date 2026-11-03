@@ -22,14 +22,14 @@
 
 <!-- TODO: this is duplicated across multiple `+page.svelte` files -->
 {#if posts.length}
-	<h1>Posts {lowerBound}–{upperBound} of {totalPosts}</h1>
+	<h1 class="page-title">Posts {lowerBound}–{upperBound} of {totalPosts}</h1>
 	<Pagination currentPage={page} {totalPosts} />
 
 	<PostsList {posts} />
 
 	<Pagination currentPage={page} {totalPosts} />
 {:else}
-	<h1>Oops!</h1>
+	<h1 class="page-title">Oops!</h1>
 
 	<p>Sorry, no posts to show here.</p>
 

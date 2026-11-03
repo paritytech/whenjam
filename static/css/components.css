@@ -1,59 +1,160 @@
-.callout {
-	background: var(--lightAccent);
-	padding: 2rem 1rem;
-  width: calc(100% + 2rem);
-	max-width: unset;
-  margin: 2rem 0 2rem -1rem;
-	font-style: italic;
-	border-radius: 0.125rem;
+/* Abstract / lede — the centred, justified summary block from the graypaper */
+.abstract {
+	margin: 2.25rem 0;
+	text-align: center;
+}
 
-  @media (min-width: 48rem) {
-    width: calc(100% + 4rem);
-    margin: 2rem 0 2rem -2rem;
-    padding: 2rem;
-  }
+.abstract p {
+	text-align: justify;
+	hyphens: auto;
+	margin: 0;
+}
+
+.abstract .abstract-word {
+	font-variant: small-caps;
+	font-weight: bold;
+	letter-spacing: 0.02em;
+	color: var(--ink-strong);
+}
+
+.callout {
+	margin: 2rem 0;
+	padding: 1.5rem;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid var(--rule);
+	border-left: 2px solid var(--accent);
+	font-size: 0.95rem;
+}
+
+.callout > *:last-child {
+	margin-bottom: 0;
 }
 
 .pagination {
-	margin: 0 0 1rem;
+	margin: 2.5rem 0 1rem;
+}
 
-	ul {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: start;
-		list-style-type: none;
-		gap: 0.5rem;
-		margin: 0;
-		padding: 0;
+.pagination ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style-type: none;
+	gap: 0.25rem;
+	margin: 0;
+	padding: 0;
+}
 
-		li {
-			margin: 0;
-		}
+.pagination li {
+	margin: 0;
+}
 
-		a {
-			background: var(--lightAccent);
-			text-decoration: none;
-			line-height: 1;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 2em;
-			height: 2em;
-			font-family: var(--primaryFont);
-			font-weight: bold;
-			transition: background .1s;
+.pagination a {
+	font-family: var(--displayFont);
+	font-size: 0.6875rem;
+	letter-spacing: 0.04em;
+	text-decoration: none;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 2.25rem;
+	height: 2.25rem;
+	padding: 0 0.5rem;
+	color: var(--ink-muted);
+	border: 1px solid var(--rule-soft);
+	transition:
+		color 0.15s,
+		border-color 0.15s;
+}
 
-			&:hover {
-				background: var(--accent);
-				color: var(--background);
-			}
+.pagination a:hover {
+	color: var(--accent);
+	border-color: var(--accent);
+}
 
-			&[aria-current="true"] {
-				background: var(--accent);
-				color: var(--background);
-				border: 1px solid currentColor;
-			}
-		}
+.pagination a[aria-current='true'] {
+	color: var(--paper-sunk);
+	background: var(--accent);
+	border-color: var(--accent);
+}
 
+/* A plain, centred index list (used for category archives) */
+.index-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 2rem 0 0;
+}
+
+.index-list li {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 1rem;
+	padding: 0.75rem 0;
+	border-bottom: 1px solid var(--rule-soft);
+}
+
+.index-list li:first-child {
+	border-top: 1px solid var(--rule-soft);
+}
+
+.index-list .count {
+	font-family: var(--displayFont);
+	font-size: 0.6875rem;
+	color: var(--ink-faint);
+}
+
+/**
+ * Home page hero — a centred title block in the manner of the graypaper's
+ * front page, followed by a quiet list of recent posts.
+ */
+.hero {
+	padding: 3rem 0 1rem;
+	text-align: center;
+}
+
+.hero__title {
+	font-family: var(--primaryFont);
+	font-weight: bold;
+	font-size: clamp(1.35rem, 1rem + 1.4vw, 2.1rem);
+	line-height: 1.3;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	color: var(--ink-strong);
+	margin: 0 0 2.5rem;
+}
+
+.hero__title span {
+	white-space: nowrap;
+}
+
+.hero .abstract {
+	max-width: 34rem;
+	margin: 0 auto 3.5rem;
+}
+
+.section-heading {
+	font-family: var(--displayFont);
+	font-size: 0.6875rem;
+	font-weight: 500;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
+	text-align: center;
+	margin: 0;
+	padding-bottom: 1rem;
+}
+
+.home-posts {
+	padding-top: 1rem;
+}
+
+.home-posts__more {
+	margin-top: 2.5rem;
+}
+
+@media (min-width: 40rem) {
+	.hero {
+		padding-top: 4.5rem;
 	}
 }

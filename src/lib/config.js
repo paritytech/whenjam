@@ -5,11 +5,10 @@
  * PLEASE BE SURE TO UPDATE THEM ALL! Thank you!
  **/
 
-export const siteTitle = 'My Awesome Blog'
-export const siteDescription = 'Built with the SvelteKit Static Blog Starter'
-export const siteURL = 'example.com'
-export const siteLink = 'https://github.com/josh-collinsworth/sveltekit-blog-starter'
-export const siteAuthor = '- find and change this text in src/lib/config.js'
+export const siteTitle = 'whenJAM'
+export const siteDescription = 'Progress reports on JAM, the Join-Accumulate Machine.'
+export const siteURL = 'whenjam.com'
+export const siteLink = 'https://whenjam.com'
 
 // Controls how many posts are shown per page on the main blog index pages
 export const postsPerPage = 10

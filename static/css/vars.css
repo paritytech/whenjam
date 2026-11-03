@@ -1,24 +1,30 @@
 :root {
-	/* Colors */
-	--accent: #E63946;
-	--background: #FAF9F8;
-	--lightAccent: #A8DAE5;
-	--lighterAccent: #E6E8E4;
-	--dark: #457B9D;
-	--darker: #1D3557;
-	--slate: #2F3948;
+	/* Colors — a dark "paper" palette, after graypaper.com */
+	--paper: #131313;
+	--paper-raised: #1b1b1b;
+	--paper-sunk: #0d0d0d;
 
-	--white: #fff;
-	--black: #152030;
+	--ink: #dbdbdb;
+	--ink-strong: #f2f0ec;
+	--ink-muted: #969696;
+	--ink-faint: #8a8a8a;
 
-	--ink: var(--slate);
-	--paper: var(--background);
+	--accent: #95daf3;
+	--accent-dim: #6ea9bd;
+
+	--rule: rgba(255, 255, 255, 0.16);
+	--rule-soft: rgba(255, 255, 255, 0.08);
 
 	/**
-	 * These fonts are broken out into two separate variables from a previous iteration. I left
-	 * it in because it's nice to be able to split out the heading and body fonts.
+	 * Computer Modern for prose (the graypaper typeface), Unbounded for
+	 * display headings and navigation.
 	 */
-	--accentFont: 'Atkinson Hyperlegible', Georgia, Times, serif;
-	--primaryFont: 'Atkinson Hyperlegible', sans-serif;
-	--codeFont: 'Fira Code', monospace;
+	--accentFont: 'Unbounded', 'Computer Modern', Georgia, serif;
+	--primaryFont: 'Computer Modern', Georgia, Cambria, 'Times New Roman', serif;
+	--displayFont: 'Unbounded', system-ui, sans-serif;
+	--codeFont: 'Fira Code', ui-monospace, Menlo, monospace;
+
+	--text-indent: 1.5rem;
+	--column-width: 800px;
+	--header-height: 3.25rem;
 }

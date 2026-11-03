@@ -10,15 +10,15 @@
 
 
 <div class="compressed-content">
-	<h1 class="h2">All blog categories</h1>
-	
-	<ul>
+	<h1 class="page-title">Categories</h1>
+
+	<ul class="index-list">
 		{#each uniqueCategories as category}
 		<li>
 			<a href="/blog/category/{category.title}">
 				{ category.title }
 			</a>
-			({category.count})
+			<span class="count">{category.count}</span>
 		</li>
 		{/each}
 	</ul>

@@ -16,12 +16,11 @@
 	<a onclick={preventDefault(focusMain)} class="skip-to-content-link" href="#main">
 		Skip to main content
 	</a>
-	
+
 	<a href="/" class="site-title">
 		{siteTitle}
 	</a>
-	
-	<HamburgerMenuButton />
-	<MainNav />
 
+	<MainNav />
+	<HamburgerMenuButton />
 </header>

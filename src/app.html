@@ -2,7 +2,15 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.png" />
+		<!-- The mark is light-on-transparent, so serve a dark-ink variant to light UIs and vice versa -->
+		<link media="(prefers-color-scheme: dark)" rel="icon" type="image/png" sizes="32x32" href="/dark/favicon-32x32.png" />
+		<link media="(prefers-color-scheme: dark)" rel="icon" type="image/png" sizes="16x16" href="/dark/favicon-16x16.png" />
+		<link media="(prefers-color-scheme: dark)" rel="apple-touch-icon" sizes="180x180" href="/dark/apple-touch-icon.png" />
+		<link media="(prefers-color-scheme: light)" rel="icon" type="image/png" sizes="32x32" href="/light/favicon-32x32.png" />
+		<link media="(prefers-color-scheme: light)" rel="icon" type="image/png" sizes="16x16" href="/light/favicon-16x16.png" />
+		<link media="(prefers-color-scheme: light)" rel="apple-touch-icon" sizes="180x180" href="/light/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/dark/favicon-32x32.png" />
+		<meta name="theme-color" content="#131313" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		%sveltekit.head%

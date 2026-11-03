@@ -15,3 +15,15 @@
 	list-style-type: none;
 	padding-left: 0;
 }
+
+.text-center {
+	text-align: center;
+}
+
+/* Small-caps run-in label, e.g. "Abstract." */
+.small-caps {
+	font-variant: small-caps;
+	font-weight: bold;
+	letter-spacing: 0.02em;
+	color: var(--ink-strong);
+}

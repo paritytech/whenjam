@@ -1,5 +1,15 @@
 <script>
 	let { posts = [] } = $props();
+
+	/** Renders a post's date in the day/month/year form used across the site. */
+	const formatDate = (date) => {
+		if (!date) return '';
+		const parsed = new Date(date);
+		if (Number.isNaN(parsed.getTime())) return date;
+		const day = String(parsed.getDate()).padStart(2, '0');
+		const month = String(parsed.getMonth() + 1).padStart(2, '0');
+		return `${day}/${month}/${parsed.getFullYear()}`;
+	};
 </script>
 
 
@@ -7,21 +17,16 @@
 	{#each posts as post}
 		<li>
 			<article>
-				<a href="/blog/{post.slug}">
-					<img
-					src={post.coverImage}
-					alt=""
-					width={post.coverWidth}
-					height={post.coverHeight}
-					style="ratio: {post.coverWidth} / {post.coverHeight}"
-					/>
+				<time class="post-date" datetime={post.date}>{formatDate(post.date)}</time>
+				<div class="post-body">
 					<h2>
-						{post.title}
+						<a href="/blog/{post.slug}">{post.title}</a>
 					</h2>
-				</a>
+					{#if post.excerpt}
+						<p>{post.excerpt}</p>
+					{/if}
+				</div>
 			</article>
-
-			<p>{post.excerpt}</p>
 		</li>
 	{/each}
 </ul>

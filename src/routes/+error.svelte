@@ -3,10 +3,10 @@
 import { page } from '$app/stores'
 </script>
 
-<h2>{$page.status}</h2>
-<p class="subhead">{$page.error.message}</p>
+<h1 class="page-title">{$page.status}</h1>
+<p class="text-center">{$page.error.message}</p>
 
-<p><strong>Sorry!</strong> Maybe try one of these links?</p>
-<ul>
+<p class="text-center"><strong>Sorry!</strong> Maybe try one of these links?</p>
+<ul class="text-center no-bullets">
 	<li><a href="/">Home</a></li>
 </ul>

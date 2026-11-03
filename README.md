@@ -146,20 +146,22 @@ they're the current page.
 
 ## Colors
 
-This starter has a default color palette (Credit to
-[coolors.co](https://coolors.co/palettes/trending)) but you can easily override
-those in the CSS. The color variable values can be found in
-`static/css/vars.css`.
+The site is styled after [graypaper.com](https://graypaper.com/): a dark,
+patterned "paper" column on a near-black backdrop, with muted grey text and a
+pale blue accent. The palette, typefaces, and layout metrics are all defined as
+CSS custom properties in `static/css/vars.css`.
 
 ## Fonts
 
 Previously, fonts were loaded from Google Fonts, but now they're hosted locally,
 for moderately better performance and a 100% reduction in tracking.
 
-The fonts in question are
-[Atkinson Hyperlegible](https://brailleinstitute.org/freefont) by the Braille
-Institute, and [Fira Code](https://github.com/tonsky/FiraCode) by Nikita
-Prokopov. The fonts are open-source; please consider supporting the authors.
+The fonts in question are [Computer Modern](https://www.ctan.org/pkg/cm-unicode)
+(the LaTeX typeface, as used by the graypaper), and
+[Unbounded](https://fonts.google.com/specimen/Unbounded) for display headings and
+navigation. [Fira Code](https://github.com/tonsky/FiraCode) by Nikita Prokopov is
+still used for code. The fonts are open-source; please consider supporting the
+authors.
 
 The font files themselves are hosted in `static/fonts`. They are linked from the
 `fonts.css` file, and set in `typography.css`.
