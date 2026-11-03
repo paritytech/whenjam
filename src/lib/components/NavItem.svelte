@@ -1,4 +1,5 @@
 <script>
+	import { resolve } from '$app/paths';
 	import { currentPage, isMenuOpen } from '../assets/js/store';
 
 	let { href, children } = $props();
@@ -14,7 +15,7 @@
 
 <li>
 	<a
-		{href}
+		href={resolve(href)}
 		onclick={maybeCloseMenu}
 		class:active={isCurrentPage}
 		aria-current={isCurrentPage ? 'page' : false}

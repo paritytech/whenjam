@@ -1,4 +1,5 @@
 <script>
+	import { resolve } from '$app/paths';
 	import { preventDefault } from 'svelte/legacy';
 
 	import MainNav from './MainNav.svelte'
@@ -17,7 +18,7 @@
 		Skip to main content
 	</a>
 
-	<a href="/" class="site-title">
+	<a href={resolve('/')} class="site-title">
 		{siteTitle}
 	</a>
 

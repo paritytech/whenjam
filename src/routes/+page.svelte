@@ -1,4 +1,5 @@
 <script>
+	import { resolve } from '$app/paths';
 	import PostsList from '#lib/components/PostsList.svelte';
 	import { siteTitle, siteDescription } from '#lib/config.js';
 
@@ -30,6 +31,6 @@
 	<h2 id="latest-posts" class="section-heading">Latest</h2>
 	<PostsList posts={data.posts} />
 	<p class="text-center home-posts__more">
-		<a href="/blog">All posts</a>
+		<a href={resolve('/blog')}>All posts</a>
 	</p>
 </section>

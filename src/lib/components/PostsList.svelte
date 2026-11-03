@@ -1,4 +1,5 @@
 <script>
+	import { resolve } from '$app/paths';
 	let { posts = [] } = $props();
 
 	/** Renders a post's date in the day/month/year form used across the site. */
@@ -14,13 +15,13 @@
 
 
 <ul class="posts-list">
-	{#each posts as post}
+	{#each posts as post (post.slug)}
 		<li>
 			<article>
 				<time class="post-date" datetime={post.date}>{formatDate(post.date)}</time>
 				<div class="post-body">
 					<h2>
-						<a href="/blog/{post.slug}">{post.title}</a>
+						<a href={resolve('/blog/[post]', { post: post.slug })}>{post.title}</a>
 					</h2>
 					{#if post.excerpt}
 						<p>{post.excerpt}</p>

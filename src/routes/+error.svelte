@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/state';
+	import { resolve } from '$app/paths';
 </script>
 
 <!-- This page handles any error encountered by the site. -->
@@ -8,5 +9,5 @@
 
 <p class="text-center"><strong>Sorry!</strong> Maybe try one of these links?</p>
 <ul class="text-center no-bullets">
-	<li><a href="/">Home</a></li>
+	<li><a href={resolve('/')}>Home</a></li>
 </ul>

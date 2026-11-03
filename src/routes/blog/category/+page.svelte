@@ -1,4 +1,5 @@
 <script>
+	import { resolve } from '$app/paths';
 	let { data } = $props();
 	let uniqueCategories = $derived(data.uniqueCategories)
 </script>
@@ -13,9 +14,9 @@
 	<h1 class="page-title">Categories</h1>
 
 	<ul class="index-list">
-		{#each uniqueCategories as category}
+		{#each uniqueCategories as category (category.title)}
 		<li>
-			<a href="/blog/category/{category.title}">
+			<a href={resolve('/blog/category/[category]', { category: category.title })}>
 				{ category.title }
 			</a>
 			<span class="count">{category.count}</span>

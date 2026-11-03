@@ -1,5 +1,6 @@
 <!-- This file renders each individual blog post for reading. Be sure to update the svelte:head below -->
 <script>
+	import { resolve } from '$app/paths';
 	let { data } = $props();
 
 	let title = $derived(data.meta.title);
@@ -68,9 +69,9 @@
 		<aside class="post-footer">
 			<h2>Filed under</h2>
 			<ul class="post-footer__categories">
-				{#each categories as category}
+				{#each categories as category (category)}
 					<li>
-						<a href="/blog/category/{category}/">
+						<a href={resolve('/blog/category/[category]', { category })}>
 							{category}
 						</a>
 					</li>
