@@ -1,6 +1,6 @@
 <script>
-	import PostsList from '$lib/components/PostsList.svelte';
-	import { siteTitle, siteDescription } from '$lib/config';
+	import PostsList from '#lib/components/PostsList.svelte';
+	import { siteTitle, siteDescription } from '#lib/config.js';
 
 	let { data } = $props();
 </script>

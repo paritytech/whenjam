@@ -2,14 +2,14 @@
 <script>
 	import { run } from 'svelte/legacy';
 
-	import Header from '$lib/components/Header.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import Header from '#lib/components/Header.svelte';
+	import Footer from '#lib/components/Footer.svelte';
 	import { currentPage, isMenuOpen } from '../lib/assets/js/store.js';
-	import { navItems } from '$lib/config';
+	import { navItems } from '#lib/config.js';
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { siteTitle, siteURL } from '$lib/config.js';
+	import { siteTitle, siteURL } from '#lib/config.js';
 	let { data, children } = $props();
 
 	const transitionIn = { delay: 150, duration: 150 };
