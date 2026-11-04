@@ -42,4 +42,4 @@ Or, if you prefer, you can run `npm run build` locally to generate the static
 files. That will result in a `build` folder you can upload anywhere a static
 site can be hosted.
 
-Use `npm run preview` _after_ a build to preview the built site locally.
+Use `pnpm run preview` _after_ a build to preview the built site locally.
