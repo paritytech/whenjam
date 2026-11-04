@@ -1,0 +1,44 @@
+*:focus {
+	outline: 2px solid var(--accent);
+	outline-offset: 2px;
+}
+
+main:focus {
+	outline: none;
+}
+
+html {
+	background: var(--paper-sunk);
+	color-scheme: dark;
+	scroll-behavior: smooth;
+	scroll-padding-top: calc(var(--header-height) + 1rem);
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	color: var(--ink);
+	font-family: var(--primaryFont);
+	font-size: 1rem;
+	line-height: 1.5;
+	background-color: var(--paper);
+	/* The graypaper's dark, patterned "paper" surface */
+	background-image: url('/images/paper-texture.svg');
+	background-attachment: fixed;
+	background-size: 300px 300px;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 40rem) {
+	body {
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+	}
+}
+
+::selection {
+	background: var(--accent);
+	color: var(--paper-sunk);
+}

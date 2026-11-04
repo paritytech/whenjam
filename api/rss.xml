@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>whenJAM</title>
+<description>Progress reports on JAM, the Join-Accumulate Machine.</description>
+<link>https://whenjam.com</link>
+<atom:link href="https://whenjam.com/api/rss.xml" rel="self" type="application/rss+xml"/>
+<item>
+<guid isPermaLink="true">https://whenjam.com/blog/2026-11-03 conformance</guid>
+<title>JAM conformance repo</title>
+<link>https://whenjam.com/blog/2026-11-03 conformance</link>
+<description>All conformance repositories moved to a dedicated GitHub organisation, jam-conformance.</description>
+<pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+</item><item>
+<guid isPermaLink="true">https://whenjam.com/blog/2026-11-02 video codec</guid>
+<title>CoreVM video codec optimisations</title>
+<link>https://whenjam.com/blog/2026-11-02 video codec</link>
+<description>Significant improvements to the CoreVM video codecs</description>
+<pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
+</item><item>
+<guid isPermaLink="true">https://whenjam.com/blog/2026-11-01 PolkaJAM</guid>
+<title>PolkaJAM almost 0.8.1</title>
+<link>https://whenjam.com/blog/2026-11-01 PolkaJAM</link>
+<description>Most Gray Paper 0.8.1 changes are now implemented in PolkaJAM.</description>
+<pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate>
+</item><item>
+<guid isPermaLink="true">https://whenjam.com/blog/2026-10-26 Gray Paper</guid>
+<title>Gray Paper 0.8 audit complete</title>
+<link>https://whenjam.com/blog/2026-10-26 Gray Paper</link>
+<description>SRLabs and Trail of Bits completed audit of the Gray Paper, without any major findings.</description>
+<pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+</item><item>
+<guid isPermaLink="true">https://whenjam.com/blog/introduction</guid>
+<title>Introduction</title>
+<link>https://whenjam.com/blog/introduction</link>
+<description>Updates on JAM and associated technologies.</description>
+<pubDate>Sun, 25 Oct 2026 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

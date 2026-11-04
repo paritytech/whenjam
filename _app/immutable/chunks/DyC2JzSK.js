@@ -1,0 +1,1 @@
+import{u as e}from"./Je-eQABr.js";import"./B__yVS3q.js";new TextEncoder;function t(t,n,r){throw n!==void 0&&typeof n!=`string`&&({message:n,...r}=n),new e({...r,status:t,message:n??`Error: ${t}`})}export{t};
