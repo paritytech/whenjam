@@ -32,13 +32,13 @@ archive of all your post categories.
 The build command (from package.json) is simply:
 
 ```
-npm run build
+pnpm run build
 ```
 
 You can use that as your build command if your repo is connected to a host like
 Netlify or Vercel, which automatically deploys.
 
-Or, if you prefer, you can run `npm run build` locally to generate the static
+Or, if you prefer, you can run `pnpm run build` locally to generate the static
 files. That will result in a `build` folder you can upload anywhere a static
 site can be hosted.
 
