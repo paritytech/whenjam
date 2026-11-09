@@ -16,55 +16,6 @@ authorizer and coretime). It also has cross-chain messaging (XCMP) and the crypt
 it needs. It will be running on a testnet, with a prototyped migration path for existing Polkadot
 parachains, and both specs and the code will be externally audited.
 
-## Scope
-
-### In scope
-
-- **Parachain Service specification**: finish the existing spec and get it approved.
-- **Cumulus integration specification**: a minimal spec covering how a Cumulus-based collator and
-  parachain runtime interact with the Parachain Service (candidate/work-package construction,
-  work-package submission / networking to guarantors, PVF entry point, authorizer/token
-  construction).
-- **A feature-complete Parachain Service implementation**: the full service, i.e. Refine +
-  Accumulate, code-upgrade lifecycle, validator-key staging, service self-upgrade, forced updates /
-  clean-up, parachain registration and management, and authorizer/coretime. Demonstrated end-to-end
-  on a testnet.
-- **Crypto host-function benchmarking & Gray Paper proposal**: benchmark candidate crypto host
-  functions (hashing, signature verification), decide which are required, and propose them to the
-  Gray Paper or write an extension. These can run inside the VM for now and move over to real host
-  functions once they are available, so this never blocks the rest of the work.
-- **Messaging (XCMP) integration**: implement cross-chain messaging against the XCMP specification,
-  which an external team writes. We build against it; we do not write it.
-- **Polkadot → JAM migration**: design and prototype the migration path that moves existing
-  parachains from the relay-chain parachain host to the Parachain Service (state hand-over,
-  ParaId/head/validation-code carry-over, cut-over sequencing). Runs in parallel during the last
-  3 months (M10–M12).
-
-### Out of scope
-
-- **Launching the testnet.** We experiment on an existing/available testnet.
-- **A zombienet that can run JAM networks.** We need this to spin up test networks, but building it
-  is a separate effort. We assume it exists before the testnet work starts.
-- **The XCMP specification.** Authoring the XCMP spec is owned by an external team. We implement
-  against it (M9–M11); writing the spec itself is out of scope and a hard input dependency.
-- **Mainnet rollout.** The deliverable runs on a testnet. Neither a production network launch nor
-  the Polkadot → JAM migration cut-over on mainnet is part of this project; the migration is
-  designed, implemented and tested (M10–M12).
-- **Coretime chain and Asset Hub internal logic.** Only their Parachain-Service-facing calls are in
-  scope; their internal economics, deposit policy, and governance are owned by those teams.
-
-### Assumptions
-
-- The Parachain Service spec is mostly complete; M1–M2 are onboarding, closing remaining open items,
-  and approval, not authoring from scratch.
-- A zombienet that can run JAM networks exists before the testnet work starts (M4), and an existing
-  testnet environment is available for the M4+ experiments.
-- The Coretime chain and Asset Hub exist as counterparties; we implement only the calls the
-  Parachain Service makes to / receives from them.
-- The PoC may build against provisional crypto host functions; the benchmarking and Gray Paper work
-  runs on its own and is reconciled during the review phase.
-- Crypto benchmarking is part-time work for one engineer.
-
 ## Phases & Milestones
 
 ### Phase 1: Specifications & Onboarding (M1–M2)
