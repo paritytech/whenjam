@@ -17,7 +17,19 @@
 					{#if project.excerpt}
 						<p>{project.excerpt}</p>
 					{/if}
-					<p>{project.progress.percent}% complete</p>
+					<div class="progress">
+						<div
+							class="progress__bar"
+							role="progressbar"
+							aria-label="{project.title} progress"
+							aria-valuemin="0"
+							aria-valuemax="100"
+							aria-valuenow={project.progress.percent}
+						>
+							<div class="progress__fill" style="width: {project.progress.percent}%"></div>
+						</div>
+						<p class="progress__label">{project.progress.percent}% complete</p>
+					</div>
 				</div>
 			</article>
 		</li>

@@ -1,8 +1,9 @@
 ---
 title: 'Parachain Service on JAM'
-excerpt: 'A hardened Parachain Service for JAM plus its Cumulus integration, demonstrated on a testnet with cross-chain messaging.'
+excerpt: 'A hardened Parachain Service for JAM plus its Cumulus integration, intended to replace the Polkadot Relay Chain, demonstrated on a testnet with cross-chain messaging.'
 start: ''
 updated: '2026-11-09'
+progressBy: 'headings'
 ---
 
 ## Abstract
@@ -25,27 +26,27 @@ crypto benchmarking plus harness scaffolding.
 
 #### M1: get oriented and start drafting
 
-- [ ] Onboard the team to the existing Parachain Service spec and identify the open items to close (e.g. the §8 messaging direction).
-- [ ] Draft the Cumulus integration spec: candidate and work-package construction, work-package submission and networking to guarantors, the PVF entry point (`jam_validate_block`) and its inputs and outputs, authorizer and collator-token construction, and the registration handshake. Keep it minimal.
-- [ ] Start the crypto benchmarking.
-- [ ] Scaffold the JAM mock/harness the PoC will run on.
+- [x] Onboard the team to the existing Parachain Service spec and identify the open items to close (e.g. the §8 messaging direction).
+- [x] Draft the Cumulus integration spec: candidate and work-package construction, work-package submission and networking to guarantors, the PVF entry point (`jam_validate_block`) and its inputs and outputs, authorizer and collator-token construction, and the registration handshake. Keep it minimal.
+- [x] Start the crypto benchmarking.
+- [x] Scaffold the JAM mock/harness the PoC will run on.
 
 #### M2: finalize and approve
 
-- [ ] Close the Parachain Service spec's open items and get it approved.
-- [ ] Get the Cumulus integration spec approved.
-- [ ] Produce the first crypto benchmark numbers and a shortlist of the host functions we need.
+- [x] Close the Parachain Service spec's open items and get it approved.
+- [x] Get the Cumulus integration spec approved.
+- [x] Produce the first crypto benchmark numbers and a shortlist of the host functions we need.
 
 #### Gate
 
-- [ ] **G1 (M2): Specs approved.** Parachain Service spec approved; Cumulus integration spec approved; a crypto host-function shortlist in hand; the harness skeleton standing up.
+- [x] **G1 (M2): Specs approved.** Parachain Service spec approved; Cumulus integration spec approved; a crypto host-function shortlist in hand; the harness skeleton standing up.
 
 ### Phase 2: Proof of Concept (M3)
 
 Built from both specs. The crypto host functions are assumed for now, so the PoC does not wait on
 the Gray Paper proposal.
 
-- [ ] The service-side happy path: spawn the child PVM, run `jam_validate_block`, check the parent head and validation code, and update the head data.
+- [x] The service-side happy path: spawn the child PVM, run `jam_validate_block`, check the parent head and validation code, and update the head data.
 - [ ] A Cumulus collator builds a candidate and work package from the integration spec, produces a PoV, and registers against the harness.
 - [ ] The harness wires it all together (the data availability and preimage calls), with the crypto host functions stubbed out.
 - [ ] Spec audit (external, in parallel): with both specs approved, an external review of the specs runs while the PoC tests them in practice.

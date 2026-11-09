@@ -25,7 +25,9 @@
 			<span>Updated <time datetime={meta.updated}>{formatDate(meta.updated)}</time></span>
 			<span> · </span>
 		{/if}
-		<span>{meta.progress.done} / {meta.progress.total} done ({meta.progress.percent}%)</span>
+		<span
+			>{meta.progress.done} / {meta.progress.total} milestones done ({meta.progress.percent}%)</span
+		>
 	</div>
 
 	<Content />
