@@ -33,8 +33,8 @@ validators and the real network launch.
 
 ### Toaster, TART & stress testing
 
-- [ ] **2026-08**: Hardware stress-tested with standard tools (i.e. not PolkaJAM). Stable machines and utilisation level identified.
-- [ ] **2026-09**: Dedicated testnet for JAM stress testing, with parameters matching planned launch params. Restarted daily with the latest version of PolkaJAM, except on weekends where it is left running for at least 2 full days.
+- [x] **2026-08**: Hardware stress-tested with standard tools (i.e. not PolkaJAM). Stable machines and utilisation level identified.
+- [x] **2026-09**: Dedicated testnet for JAM stress testing, with parameters matching planned launch params. Restarted daily with the latest version of PolkaJAM, except on weekends where it is left running for at least 2 full days.
   - [ ] Block time to be changed to 2s when PolkaJAM is ready.
 - [x] **2026-09**: Stress test automatically run against the stress testnet.
 - [x] **2026-09**: TART running on the stress testnet, with a basic Grafana frontend, improved over time based on requests from the JAM team. Not a deliverable; it exists only to support development.
