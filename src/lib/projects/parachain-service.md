@@ -37,9 +37,9 @@ crypto benchmarking plus harness scaffolding.
 - [x] Get the Cumulus integration spec approved.
 - [x] Produce the first crypto benchmark numbers and a shortlist of the host functions we need.
 
-#### Gate
+#### Gate (Phase 1)
 
-- [x] **G1: Specs approved.** Parachain Service spec approved; Cumulus integration spec approved; a crypto host-function shortlist in hand; the harness skeleton standing up.
+- [x] **Specs approved:** Parachain Service spec approved; Cumulus integration spec approved; a crypto host-function shortlist in hand; the harness skeleton standing up.
 
 ### Phase 2: Proof of Concept (M3)
 
@@ -51,9 +51,9 @@ the Gray Paper proposal.
 - [x] The harness wires it all together (the data availability and preimage calls), with the crypto host functions stubbed out.
 - [x] Spec audit (external, in parallel): with both specs approved, an external review of the specs runs while the PoC tests them in practice.
 
-#### Gate
+#### Gate (Phase 2)
 
-- [x] **G2: Working PoC.** Register a parachain, have a collator produce a block, validate it, and record the new head, demonstrated end to end on the harness, with the spec audit underway.
+- [x] **Working PoC:** Register a parachain, have a collator produce a block, validate it, and record the new head, demonstrated end to end on the harness, with the spec audit underway.
 
 ### Phase 3: Review & Testnet Experiments (M4–M5)
 
@@ -61,12 +61,12 @@ The code review and the testnet work run in parallel.
 
 - [ ] Review the PoC, address the findings, and flesh out the paths the PoC stubbed.
 - [ ] Deploy the Parachain Service onto an existing testnet, wire up a collator, run the registration flow, and watch real block production. Feed what we learn back into the Cumulus spec.
-- [ ] Finish the crypto benchmarking and decide which host functions we need.
+- [x] Finish the crypto benchmarking and decide which host functions we need.
 - [ ] Submit a Gray Paper proposal or extension for the crypto host functions.
 
-#### Gate
+#### Gate (Phase 3)
 
-- [ ] **G3: Reviewed + testnet-running.** Codebase reviewed and adjusted; the Parachain Service running in testnet experiments; crypto host-function set decided and the Gray Paper proposal submitted.
+- [ ] **Reviewed + testnet-running:** Codebase reviewed and adjusted; the Parachain Service running in testnet experiments; crypto host-function set decided and the Gray Paper proposal submitted.
 
 ### Phase 4: Hardening & Messaging (M6–M12)
 
@@ -96,8 +96,8 @@ This is where most of the production engineering happens.
 - [ ] Do a final pass over the spec.
 - [ ] Close out the audit findings and prepare the audit hand-off.
 
-#### Gate
+#### Gate (Phase 4)
 
-- [ ] **G4: Project exit.** A feature-complete, hardened implementation running on the testnet with
+- [ ] **Project exit:** A feature-complete, hardened implementation running on the testnet with
 messaging, the crypto host functions in place, the migration path prototyped, and the code/system
 audit done with its findings addressed.
