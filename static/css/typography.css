@@ -213,3 +213,27 @@ thead th {
 	color: var(--ink-muted);
 	margin-top: 0.5rem;
 }
+
+/* Task lists — ticked items recede: muted and italic, with a green tick */
+.post .task-list-item input[type='checkbox'] {
+	accent-color: var(--progress);
+}
+
+.post .task-list-item:has(> input[type='checkbox']:checked) {
+	color: var(--ink-faint);
+	font-style: italic;
+}
+
+.post .task-list-item:has(> input[type='checkbox']:checked) > strong {
+	color: inherit;
+}
+
+/* A nested item keeps its own state, even under a ticked parent */
+.post .task-list-item:has(> input[type='checkbox']:not(:checked)) {
+	color: var(--ink);
+	font-style: normal;
+}
+
+.post .task-list-item:has(> input[type='checkbox']:not(:checked)) > strong {
+	color: var(--ink-strong);
+}

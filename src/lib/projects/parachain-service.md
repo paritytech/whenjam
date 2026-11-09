@@ -47,13 +47,13 @@ Built from both specs. The crypto host functions are assumed for now, so the PoC
 the Gray Paper proposal.
 
 - [x] The service-side happy path: spawn the child PVM, run `jam_validate_block`, check the parent head and validation code, and update the head data.
-- [ ] A Cumulus collator builds a candidate and work package from the integration spec, produces a PoV, and registers against the harness.
-- [ ] The harness wires it all together (the data availability and preimage calls), with the crypto host functions stubbed out.
-- [ ] Spec audit (external, in parallel): with both specs approved, an external review of the specs runs while the PoC tests them in practice.
+- [x] A Cumulus collator builds a candidate and work package from the integration spec, produces a PoV, and registers against the harness.
+- [x] The harness wires it all together (the data availability and preimage calls), with the crypto host functions stubbed out.
+- [x] Spec audit (external, in parallel): with both specs approved, an external review of the specs runs while the PoC tests them in practice.
 
 #### Gate
 
-- [ ] **G2 (M3): Working PoC.** Register a parachain, have a collator produce a block, validate it, and record the new head, demonstrated end to end on the harness, with the spec audit underway.
+- [x] **G2 (M3): Working PoC.** Register a parachain, have a collator produce a block, validate it, and record the new head, demonstrated end to end on the harness, with the spec audit underway.
 
 ### Phase 3: Review & Testnet Experiments (M4–M5)
 
@@ -78,12 +78,18 @@ This is where most of the production engineering happens.
 - [ ] Harden the Cumulus integration on the testnet: registration, recovery, and code upgrades driven from a real collator.
 - [ ] Authorizer and coretime work.
 - [ ] Once the proposed crypto host functions are accepted, integrate them, tune performance and gas metering, and check we stay within the work-report size budget.
+
+#### Gate
+
 - [ ] **G4 (M8): Feature-complete service.** Full lifecycle hardened; crypto running in-VM behind a stable interface, with real host functions swapped in if available by then.
 
 #### M9–M11: Messaging (XCMP)
 
 - [ ] Take the external XCMP spec and work out what it needs from the service: the inbound and outbound host functions, the channel state to store, and how message lifetime interacts with the data availability window. Feed any integration concerns back to the spec team.
 - [ ] Demonstrate messages flowing between two parachains on the testnet.
+
+#### Gate
+
 - [ ] **G5 (M11): Messaging working.** XCMP design signed off and demonstrated between two parachains on testnet.
 
 #### M6+: Code / system audit (external, runs alongside)
@@ -97,5 +103,8 @@ This is where most of the production engineering happens.
 - [ ] Run the full integration test suite.
 - [ ] Do a final pass over the spec.
 - [ ] Close out the audit findings and prepare the audit hand-off.
+
+#### Gates
+
 - [ ] **G6 (M12): Migration prototyped.** Polkadot → JAM migration path designed and demonstrated on testnet (short of mainnet cut-over).
 - [ ] **G7 (M12): Audited & stable.** Integration suite green; external audit complete on the stable system with findings addressed, and any late-landing work scheduled for a follow-up pass.
