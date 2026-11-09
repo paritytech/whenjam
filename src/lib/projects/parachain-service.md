@@ -47,13 +47,13 @@ Built from both specs. The crypto host functions are assumed for now, so the PoC
 the Gray Paper proposal.
 
 - [x] The service-side happy path: spawn the child PVM, run `jam_validate_block`, check the parent head and validation code, and update the head data.
-- [ ] A Cumulus collator builds a candidate and work package from the integration spec, produces a PoV, and registers against the harness.
-- [ ] The harness wires it all together (the data availability and preimage calls), with the crypto host functions stubbed out.
-- [ ] Spec audit (external, in parallel): with both specs approved, an external review of the specs runs while the PoC tests them in practice.
+- [x] A Cumulus collator builds a candidate and work package from the integration spec, produces a PoV, and registers against the harness.
+- [x] The harness wires it all together (the data availability and preimage calls), with the crypto host functions stubbed out.
+- [x] Spec audit (external, in parallel): with both specs approved, an external review of the specs runs while the PoC tests them in practice.
 
 #### Gate
 
-- [ ] **G2 (M3): Working PoC.** Register a parachain, have a collator produce a block, validate it, and record the new head, demonstrated end to end on the harness, with the spec audit underway.
+- [x] **G2 (M3): Working PoC.** Register a parachain, have a collator produce a block, validate it, and record the new head, demonstrated end to end on the harness, with the spec audit underway.
 
 ### Phase 3: Review & Testnet Experiments (M4–M5)
 
