@@ -25,10 +25,11 @@ validators and the real network launch.
 
 ### Gray Paper
 
-- [ ] **2026-08**: GP 0.9 release. This should include the last major changes; 0.9 to 1.0 should only be minor changes.
-- [ ] **2026-09**: External GP audit begins.
-- [ ] **2026-12**: External GP audit complete.
-- [ ] **2026-12**: GP "1.0" release. No big changes from 0.9; most changes should be fixes, in particular in response to the external audit. Assumed not to contain the networking spec, so it may not actually be called 1.0.
+- [x] **2026-08**: External 0.8 GP audit complete.
+- [x] **2026-09**: GP 0.8.1 release. This should include the last major changes; 0.8.1 to 1.0 should only be minor changes (potential exceptions are PVM changes intended for 0.9).
+- [ ] **2026-09**: External 1.0 GP audit begins.
+- [ ] **2026-12**: External 1.o GP audit complete.
+- [ ] **2026-12**: GP "1.0" release. No big changes from 0.8.1 and 0.9; most changes should be fixes, in particular in response to the external audit. Assumed not to contain the networking spec, so it may not actually be called 1.0.
 
 ### Toaster, TART & stress testing
 
@@ -47,7 +48,7 @@ validators and the real network launch.
 
 ### PolkaJAM
 
-- [ ] **2026-10**: PolkaJAM implements GP 0.9 and is functionally complete except for BEEFY. No optimisation or robustness work yet; it is not expected to meet the reliability or performance requirements at this point.
+- [ ] **2026-10**: PolkaJAM implements GP 0.8.1 and is functionally complete except for BEEFY. No optimisation or robustness work yet; it is not expected to meet the reliability or performance requirements at this point.
 - [ ] **2026-11**: BEEFY implemented.
 - [ ] **2026-11**: Performance tests exist for the major subsystems: guaranteeing, availability, auditing, finality, block execution.
 - [ ] **2026-12**: 100% capacity stress test runs for 2 days on the Toaster with PolkaJAM validators and chain parameters set as they will be for launch: no node failures, 99% work-package throughput, max 2 blocks finality lag. The planned launch parameters may need adjusting to make this possible.
@@ -59,4 +60,4 @@ validators and the real network launch.
 ### Launch
 
 - [ ] **2027-02**: Public test network with non-Parity validator nodes, running for at least a month prior to the real network launch.
-- [ ] **2027-03**: Real network launch.
+- [ ] **2027-03**: Real test network launch.

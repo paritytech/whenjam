@@ -1,5 +1,6 @@
 <script>
 	import { formatDate } from '#lib/assets/js/formatDate.js';
+	import { showProgress } from '#lib/config.js';
 
 	let { data } = $props();
 
@@ -23,11 +24,14 @@
 	<div class="meta">
 		{#if meta.updated}
 			<span>Updated <time datetime={meta.updated}>{formatDate(meta.updated)}</time></span>
-			<span> · </span>
 		{/if}
-		<span
-			>{meta.progress.done} / {meta.progress.total} milestones done ({meta.progress.percent}%)</span
-		>
+		{#if showProgress}
+			{#if meta.updated}<span> · </span>{/if}
+			<span
+				>{meta.progress.done} / {meta.progress.total} milestones done ({meta.progress
+					.percent}%)</span
+			>
+		{/if}
 	</div>
 
 	<Content />

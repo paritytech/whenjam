@@ -1,6 +1,7 @@
 <script>
 	import { resolve } from '$app/paths';
 	import { formatDate } from '#lib/assets/js/formatDate.js';
+	import { showProgress } from '#lib/config.js';
 
 	let { projects = [] } = $props();
 </script>
@@ -17,19 +18,21 @@
 					{#if project.excerpt}
 						<p>{project.excerpt}</p>
 					{/if}
-					<div class="progress">
-						<div
-							class="progress__bar"
-							role="progressbar"
-							aria-label="{project.title} progress"
-							aria-valuemin="0"
-							aria-valuemax="100"
-							aria-valuenow={project.progress.percent}
-						>
-							<div class="progress__fill" style="width: {project.progress.percent}%"></div>
+					{#if showProgress}
+						<div class="progress">
+							<div
+								class="progress__bar"
+								role="progressbar"
+								aria-label="{project.title} progress"
+								aria-valuemin="0"
+								aria-valuemax="100"
+								aria-valuenow={project.progress.percent}
+							>
+								<div class="progress__fill" style="width: {project.progress.percent}%"></div>
+							</div>
+							<p class="progress__label">{project.progress.percent}% complete</p>
 						</div>
-						<p class="progress__label">{project.progress.percent}% complete</p>
-					</div>
+					{/if}
 				</div>
 			</article>
 		</li>

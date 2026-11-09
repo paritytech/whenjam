@@ -10,6 +10,9 @@ export const siteDescription = 'Progress reports on JAM, the Join-Accumulate Mac
 export const siteURL = 'whenjam.com';
 export const siteLink = 'https://whenjam.com';
 
+// Show progress bars and % complete on the project lists and project pages.
+export const showProgress = false;
+
 // Edit this to alter the main nav menu. (Also used by the footer and mobile nav.)
 export const navItems = [
 	{

@@ -24,12 +24,12 @@
 		</p>
 		<ul style="text-align: left;">
 			<li>
-				<b>PolkaJAM</b> (Parity's full node implementation of JAM) will be production ready by end of
+				<a href={resolve('/project/polkajam')}>PolkaJAM</a> (Parity's full node implementation of JAM) will be production ready by end of
 				Q1 2027, and initialy deployed to create a JAM testnet. In lock step with the Polkadot migration
 				(from the Relay Chain) to the Parachain Service, JAM will be launched in production.
 			</li>
 			<li>
-				The <b>Parachain Service</b> (the replacement of the Polkadot Relay Chain) will be production
+				The <a href={resolve('/project/parachain-service')}>Parachain Service</a> (the replacement of the Polkadot Relay Chain) will be production
 				ready, before the end of Q2 2027. The Parachain Service will not only provide a replacement for
 				the Relay Chain, it will also enable the the tokenomics of JAM resource tokens from Polkadot Hub.
 			</li>
