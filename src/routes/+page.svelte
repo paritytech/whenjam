@@ -1,6 +1,6 @@
 <script>
 	import { resolve } from '$app/paths';
-	import PostsList from '#lib/components/PostsList.svelte';
+	import ProjectsList from '#lib/components/ProjectsList.svelte';
 	import { siteTitle, siteDescription } from '#lib/config.js';
 
 	let { data } = $props();
@@ -28,9 +28,9 @@
 </div>
 
 <section class="home-posts" aria-labelledby="latest-posts">
-	<h2 id="latest-posts" class="section-heading">Latest</h2>
-	<PostsList posts={data.posts} />
+	<h2 id="latest-posts" class="section-heading">Projects</h2>
+	<ProjectsList projects={data.projects} />
 	<p class="text-center home-posts__more">
-		<a href={resolve('/blog')}>All posts</a>
+		<a href={resolve('/project')}>All projects</a>
 	</p>
 </section>

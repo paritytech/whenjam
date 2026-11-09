@@ -1,31 +1,26 @@
-# static blog
+# whenJAM
 
-## Adding new posts
+## Adding projects
 
-Adding new posts is as simple as dropping a new `.md` file into `src/lib/posts`.
-New posts will automatically show up on the site, be added to the posts API, and
-any category pages.
+A program is made up of projects. Each project is a single Markdown file in
+`src/lib/projects/<slug>.md`, served at `/project/<slug>` and listed at
+`/project` (most recently updated first).
 
-A few demo Markdown posts are included, and highlight some of the features of
-this starter. These demo posts can be updated or removed, but it may be best to
-use one as a starting point, just for the frontmatter properties.
+Frontmatter:
 
-If you want to use other frontmatter properties in the template (or just modify
-the layout), make changes in `src/routes/blog/[post]/+page.svelte`.
+```yaml
+---
+title: 'Parachain Service on JAM'
+excerpt: 'One-line summary, used in meta tags and the project list.'
+start: '2026-07' # month M1 starts (YYYY-MM); may be left empty
+updated: '2026-11-09' # bump whenever you tick a box
+---
+```
 
-⚠️ **Note: posts should have a `date` and an `excerpt` defined in the
-frontmatter.** They're sorted by `date`, and use `excerpt` in page meta tags
-(for SEO, social sharing, etc.) There are also other frontmatter properties used
-to enhance the site experience, like the `coverWidth` and `coverHeight`, which
-are used in the template to reserve space for the image, minimizing cumulative
-layout shift.
-
-The starter will still work without `date` properties in your posts, but the
-sorting won't be right. Similarly, you can have posts without an `excerpt`, but
-your SEO/social previews will be sub-optimal.
-
-Also: while there's no link to it by default, `/blog/category` exists as an
-archive of all your post categories.
+Progress is tracked with Markdown task lists (`- [ ]` / `- [x]`). At build
+time every task item in the file is counted, and each project's metadata gets
+`progress: { done, total, percent }`. `percent` is rounded down, so it is only
+100 when every item is ticked; a project with no task items is 0%.
 
 ## Building, deploying and hosting
 

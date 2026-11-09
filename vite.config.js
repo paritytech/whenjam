@@ -19,16 +19,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 			],
 			adapter: adapter(),
 			prerender: {
-				entries: [
-					'*',
-					'/api/posts/page/*',
-					'/blog/category/*/page/',
-					'/blog/category/*/page/*',
-					'/blog/category/page/',
-					'/blog/category/page/*',
-					'/blog/page/',
-					'/blog/page/*'
-				]
+				entries: ['*']
 			}
 		})
 	],
