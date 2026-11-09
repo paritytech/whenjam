@@ -2,16 +2,15 @@
 	import { resolve } from '$app/paths';
 	import { preventDefault } from 'svelte/legacy';
 
-	import MainNav from './MainNav.svelte'
-	import HamburgerMenuButton from './HamburgerMenuButton.svelte'
-	import { siteTitle } from '#lib/config.js'
+	import MainNav from './MainNav.svelte';
+	import HamburgerMenuButton from './HamburgerMenuButton.svelte';
+	import { siteTitle } from '#lib/config.js';
 
 	const focusMain = () => {
 		const main = document.querySelector('main');
 		main.focus();
-	}
+	};
 </script>
-
 
 <header>
 	<a onclick={preventDefault(focusMain)} class="skip-to-content-link" href="#main">

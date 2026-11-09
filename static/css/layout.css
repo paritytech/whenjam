@@ -148,6 +148,31 @@ img {
 	color: var(--ink-muted);
 }
 
+/* Project progress — a full-width bar, green border and green fill */
+.posts-list .progress {
+	margin-top: 0.75rem;
+}
+
+.posts-list .progress__bar {
+	height: 0.625rem;
+	border: 1px solid var(--progress);
+	background: transparent;
+}
+
+.posts-list .progress__fill {
+	height: 100%;
+	background: var(--progress);
+}
+
+.posts-list .progress__label {
+	margin: 0.35rem 0 0;
+	font-family: var(--displayFont);
+	font-size: 0.6875rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--progress);
+}
+
 .posts-list img {
 	display: none;
 }

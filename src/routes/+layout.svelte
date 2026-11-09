@@ -9,7 +9,6 @@
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { siteTitle, siteURL } from '#lib/config.js';
 	let { data, children } = $props();
 
 	const transitionIn = { delay: 150, duration: 150 };
@@ -49,12 +48,6 @@
 	<link rel="stylesheet" href="/css/utilities.css" />
 	<link rel="stylesheet" href="/css/code.css" />
 	<link rel="stylesheet" href="/css/prism.css" />
-	<link
-		rel="alternate"
-		type="application/rss+xml"
-		title={siteTitle}
-		href="https://{siteURL}/api/rss.xml"
-	/>
 </svelte:head>
 
 <!--

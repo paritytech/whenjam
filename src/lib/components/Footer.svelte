@@ -8,9 +8,6 @@
 	<nav>
 		<ul>
 			<li>
-				<a href={resolve('/api/rss.xml')} data-sveltekit-reload>RSS</a>
-			</li>
-			<li>
 				<a href={resolve('/')}>Home</a>
 			</li>
 		</ul>

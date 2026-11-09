@@ -1,7 +1,3 @@
-import fetchPosts from '#lib/assets/js/fetchPosts.js';
+import { fetchProjects } from '#lib/assets/js/fetchProjects.js';
 
-export const load = async () => {
-	const { posts } = await fetchPosts({ limit: 5 });
-
-	return { posts };
-};
+export const load = () => ({ projects: fetchProjects() });
