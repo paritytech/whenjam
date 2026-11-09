@@ -39,7 +39,7 @@ crypto benchmarking plus harness scaffolding.
 
 #### Gate
 
-- [x] **G1 (M2): Specs approved.** Parachain Service spec approved; Cumulus integration spec approved; a crypto host-function shortlist in hand; the harness skeleton standing up.
+- [x] **G1: Specs approved.** Parachain Service spec approved; Cumulus integration spec approved; a crypto host-function shortlist in hand; the harness skeleton standing up.
 
 ### Phase 2: Proof of Concept (M3)
 
@@ -53,7 +53,7 @@ the Gray Paper proposal.
 
 #### Gate
 
-- [x] **G2 (M3): Working PoC.** Register a parachain, have a collator produce a block, validate it, and record the new head, demonstrated end to end on the harness, with the spec audit underway.
+- [x] **G2: Working PoC.** Register a parachain, have a collator produce a block, validate it, and record the new head, demonstrated end to end on the harness, with the spec audit underway.
 
 ### Phase 3: Review & Testnet Experiments (M4–M5)
 
@@ -66,7 +66,7 @@ The code review and the testnet work run in parallel.
 
 #### Gate
 
-- [ ] **G3 (M5): Reviewed + testnet-running.** Codebase reviewed and adjusted; the Parachain Service running in testnet experiments; crypto host-function set decided and the Gray Paper proposal submitted.
+- [ ] **G3: Reviewed + testnet-running.** Codebase reviewed and adjusted; the Parachain Service running in testnet experiments; crypto host-function set decided and the Gray Paper proposal submitted.
 
 ### Phase 4: Hardening & Messaging (M6–M12)
 
@@ -79,18 +79,10 @@ This is where most of the production engineering happens.
 - [ ] Authorizer and coretime work.
 - [ ] Once the proposed crypto host functions are accepted, integrate them, tune performance and gas metering, and check we stay within the work-report size budget.
 
-#### Gate
-
-- [ ] **G4 (M8): Feature-complete service.** Full lifecycle hardened; crypto running in-VM behind a stable interface, with real host functions swapped in if available by then.
-
 #### M9–M11: Messaging (XCMP)
 
 - [ ] Take the external XCMP spec and work out what it needs from the service: the inbound and outbound host functions, the channel state to store, and how message lifetime interacts with the data availability window. Feed any integration concerns back to the spec team.
 - [ ] Demonstrate messages flowing between two parachains on the testnet.
-
-#### Gate
-
-- [ ] **G5 (M11): Messaging working.** XCMP design signed off and demonstrated between two parachains on testnet.
 
 #### M6+: Code / system audit (external, runs alongside)
 
@@ -104,7 +96,8 @@ This is where most of the production engineering happens.
 - [ ] Do a final pass over the spec.
 - [ ] Close out the audit findings and prepare the audit hand-off.
 
-#### Gates
+#### Gate
 
-- [ ] **G6 (M12): Migration prototyped.** Polkadot → JAM migration path designed and demonstrated on testnet (short of mainnet cut-over).
-- [ ] **G7 (M12): Audited & stable.** Integration suite green; external audit complete on the stable system with findings addressed, and any late-landing work scheduled for a follow-up pass.
+- [ ] **G4: Project exit.** A feature-complete, hardened implementation running on the testnet with
+messaging, the crypto host functions in place, the migration path prototyped, and the code/system
+audit done with its findings addressed.
