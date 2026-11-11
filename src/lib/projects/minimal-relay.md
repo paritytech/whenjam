@@ -8,7 +8,7 @@ progressBy: 'headings'
 
 ## Abstract
 
-The deliverable is the **Minimal Relay** [RFC-32](https://polkadot-fellows.github.io/RFCs/approved/0032-minimal-relay.html), i.e. the Relay Chain is left with no user-callable extrinsics, zero DOT and no way to fund it again, clearing the path to Parachain Service and JAM. This is completion of the of work done during [Asset Hub Migraiton](https://hackmd.io/@seadanda/B1QIVXrwJg) where balances, staking, governance, and other user-facing functionality were migrated to the Hub. This is two be done in two phases AHMv2 and OnDemand Coretime Credit.
+The deliverable is the **Minimal Relay** [RFC-32](https://polkadot-fellows.github.io/RFCs/approved/0032-minimal-relay.html), i.e. the Relay Chain is left with no user-callable extrinsics, zero DOT and no way to fund it again, clearing the path to Parachain Service and JAM. This is completion of the of work done during [Asset Hub Migraiton](https://hackmd.io/@seadanda/B1QIVXrwJg) where balances, staking, governance, and other user-facing functionality were migrated to the Hub. This is two be done in two phases AHMv2 and OnDemand Coretime Credit. Once both these phases are code complete and properly tested their migrations will enacted on Polkadot by the Fellowship.
 
 ## Phases and Milestones
 
