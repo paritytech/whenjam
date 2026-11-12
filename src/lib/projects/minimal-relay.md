@@ -12,7 +12,7 @@ The deliverable is the **Minimal Relay** ([RFC-32](https://polkadot-fellows.gith
 
 ## Phases & Milestones
 
-### code complete
+### Code complete
 
 - [ ] [Parachain Registrar](https://github.com/paritytech/polkadot-sdk/issues/12731): Most of the functionality is left on Relay Chain, while user facing interactions are migrated to Coretime. Bi-directional communication between Relay Chain and Coretime via XCM.
 - [ ] [HRMP Channels](https://github.com/paritytech/polkadot-sdk/issues/12718): HRMP channel management stays on the Relay Chain. Only the channel deposits are moved to Coretime.
