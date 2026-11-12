@@ -8,11 +8,11 @@ progressBy: 'headings'
 
 ## Abstract
 
-The deliverable is the **Minimal Relay** ([RFC-32](https://polkadot-fellows.github.io/RFCs/approved/0032-minimal-relay.html)), i.e. the Relay Chain is left with no user-callable extrinsics, zero DOT and no way to fund it again, clearing the path to Parachain Service and JAM. This is the completion of the work done during [Asset Hub Migration](https://hackmd.io/@seadanda/B1QIVXrwJg) where balances, staking, governance, and other user-facing functionality were migrated to the Hub. This is to be done in two phases: AHMv2 and OnDemand Coretime credits. Once both these phases are code complete and properly tested, their migrations will be enacted on Polkadot by the Fellowship.
+The deliverable is the **Minimal Relay** ([RFC-32](https://polkadot-fellows.github.io/RFCs/approved/0032-minimal-relay.html)), i.e. the Relay Chain is left with no signed extrinsics, zero DOT and no way to fund it again, clearing the path to Parachain Service and JAM. This is the completion of the work done during [Asset Hub Migration](https://hackmd.io/@seadanda/B1QIVXrwJg) where balances, staking, governance, and other user-facing functionality were migrated to the Hub. This work is AHMv2 ([overall tracker](https://github.com/paritytech/polkadot-sdk/issues/13481)), done in two workstreams: the Relay Chain migration and on-demand coretime. Once both are code complete and properly tested, their migrations will be enacted on Polkadot by the Fellowship.
 
 ## Phases & Milestones
 
-### AHMv2 code complete
+### Minimal Relay (AHMv2) code complete
 
 - [ ] [Parachain Registrar](https://github.com/paritytech/polkadot-sdk/issues/12731): Most of the functionality is left on Relay Chain, while user facing interactions are migrated to Coretime. Bi-directional communication between Relay Chain and Coretime via XCM.
 - [ ] [HRMP Channels](https://github.com/paritytech/polkadot-sdk/issues/12718): HRMP channel management stays on the Relay Chain. Only the channel deposits are moved to Coretime.
@@ -20,12 +20,12 @@ The deliverable is the **Minimal Relay** ([RFC-32](https://polkadot-fellows.gith
   - Migrate registrar and HRMP deposits along with minimum balance needed for parachain renewal to Coretime during a multi-block migration
   - Free balance is teleported from Relay Chain to Asset Hub.
   - Disallow teleports/reserve transfers to Relay Chain.
-- [ ] Proxy: Move proxies to Coretime & Asset Hub.
+- [ ] Proxies that are still meaningful on Coretime are recreated there. The rest are dropped.
 - [ ] No signed extrinsics on Relay Chain post migration:
   - Filter out every call which accepts a signed origin.
   - Parachains can still reach the Relay Chain over XCM for HRMP and registrar calls only, via rate-limited unpaid execution. Everything else in the XCM executor is restricted to system origins.
 
-### OnDemand Coretime credits code complete
+### On-demand coretime code complete
 
 - [ ] Filter the on-demand extrinsics on the relay. Retire on-demand credits (from Coretime::Broker).
-- [ ] New extrinsic on the existing `broker` pallet to place an on-demand order paying DOT on Coretime.
+- [ ] New `on-demand` pallet on Coretime with a `place_order` extrinsic paying DOT.
