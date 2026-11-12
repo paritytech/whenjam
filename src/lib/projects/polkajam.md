@@ -25,11 +25,12 @@ validators and the real network launch.
 
 ### Gray Paper
 
-- [x] **2026-08**: External 0.8 GP audit complete.
-- [x] **2026-09**: GP 0.8.1 release. This should include the last major changes; 0.8.1 to 1.0 should only be minor changes (potential exceptions are PVM changes intended for 0.9).
-- [ ] **2026-09**: External 1.0 GP audit begins.
-- [ ] **2026-12**: External 1.o GP audit complete.
-- [ ] **2026-12**: GP "1.0" release. No big changes from 0.8.1 and 0.9; most changes should be fixes, in particular in response to the external audit. Assumed not to contain the networking spec, so it may not actually be called 1.0.
+- [x] **2026-09**: External 0.8 GP audit complete.
+- [ ] **2026-11**: GP 0.8.1 release. This includes the last major changes outside of the PVM; 0.8.1 to 1.0 should only include minor changes, with the exception of changes to complete the PVM gas model.
+- [ ] **2026-12**: GP 0.9 release. This will include the final changes to the PVM gas model and minor changes to address audit findings.
+- [ ] **2026-12**: External 1.0 GP audit begins.
+- [ ] **2026-01**: External 1.0 GP audit complete.
+- [ ] **2026-01**: GP "1.0" release. No big changes from 0.8.1 and 0.9; most changes should be fixes, in particular in response to the external audit. Assumed not to contain the networking spec, so it may not actually be called 1.0.
 
 ### Toaster, TART & stress testing
 
@@ -48,7 +49,19 @@ validators and the real network launch.
 
 ### PolkaJAM
 
-- [ ] **2026-10**: PolkaJAM implements GP 0.8.1 and is functionally complete except for BEEFY. No optimisation or robustness work yet; it is not expected to meet the reliability or performance requirements at this point.
+- [x] **2025-05**: Nightly releases available at <https://github.com/paritytech/polkajam-releases>, currently implementing GP 0.6.5.
+- [x] **2025-06**: GP 0.6.6 implemented.
+- [x] **2025-07**: GP 0.6.7 implemented
+- [x] **2025-08**: GP 0.7.0 implemented.
+- [x] **2025-10**: GP 0.7.1 implemented. GP 0.7.1 in particular combined the Accumulate and On-transfer PVM entry points and added the Registrar service privilege.
+- [x] **2025-11**: GP 0.7.2 implemented. GP 0.7.2 included a variety of minor fixes.
+- [x] **2025-12**: Proxy node support. Proxy nodes forward work-package submissions and DA requests to the active validators.
+- [x] **2026-02**: Auditing subsystem broadly implemented and working.
+- [x] **2026-05**: Disputes extrinsic construction implemented.
+- [x] **2026-07**: WebTransport support implemented.
+- [x] **2026-09**: Warp sync working.
+- [x] **2026-10**: GP 0.8.0 implemented. GP 0.8.0 in particular included a new PVM gas model and support for changing the validator set size between epochs.
+- [ ] **2026-11**: PolkaJAM implements GP 0.8.1 and is functionally complete except for BEEFY. It is not expected to meet the reliability or performance requirements at this point.
 - [ ] **2026-11**: BEEFY implemented.
 - [ ] **2026-11**: Performance tests exist for the major subsystems: guaranteeing, availability, auditing, finality, block execution.
 - [ ] **2026-12**: 100% capacity stress test runs for 2 days on the Toaster with PolkaJAM validators and chain parameters set as they will be for launch: no node failures, 99% work-package throughput, max 2 blocks finality lag. The planned launch parameters may need adjusting to make this possible.
