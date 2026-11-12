@@ -9,7 +9,7 @@ progressBy: 'items'
 
 ## Abstract
 
-The deliverable is **PolkaJAM**, Parity's full node implementation of JAM. It will implement the Gray
+The deliverable is **PolkaJAM**, Parity's full node Rust implementation of JAM. It will implement the Gray
 Paper (GP 1.0) and the JAM networking protocol, and needs to be robust and fast enough to be the only
 implementation running at the initial network launch. The target network is to have ~200 validators
 running ~60–70 cores with a 6-second slot time. In favourable conditions it will accumulate one
