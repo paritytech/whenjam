@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- The mark is light-on-transparent, so serve a dark-ink variant to light UIs and vice versa -->
+		<link
+			media="(prefers-color-scheme: dark)"
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/dark/favicon-32x32.png"
+		/>
+		<link
+			media="(prefers-color-scheme: dark)"
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/dark/favicon-16x16.png"
+		/>
+		<link
+			media="(prefers-color-scheme: dark)"
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/dark/apple-touch-icon.png"
+		/>
+		<link
+			media="(prefers-color-scheme: light)"
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/light/favicon-32x32.png"
+		/>
+		<link
+			media="(prefers-color-scheme: light)"
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/light/favicon-16x16.png"
+		/>
+		<link
+			media="(prefers-color-scheme: light)"
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/light/apple-touch-icon.png"
+		/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/dark/favicon-32x32.png" />
+		<meta name="theme-color" content="#131313" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link href="../_app/immutable/entry/start.zYH3ZlXE.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/payload.DSmR2FwN.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CRzLMJPS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C7aMnjD_.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C664bFmJ.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/TP5PdYPH.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/1EbpFYzI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/1UEjRFCZ.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ChOEsHso.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CxREh7eG.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BWNisnt6.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.NJwydMU-.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DK3Fl9T5.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D_0hfnwP.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Cl8kLXk_.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BL7jkEz7.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/8mc3qhDt.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.1B6tZ8N6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BuecnaUS.js" rel="modulepreload">
+		<!--12qhfyh--><link rel="stylesheet" href="/css/vars.css"/> <link rel="stylesheet" href="/css/root.css"/> <link rel="stylesheet" href="/css/fonts.css"/> <link rel="stylesheet" href="/css/typography.css"/> <link rel="stylesheet" href="/css/layout.css"/> <link rel="stylesheet" href="/css/components.css"/> <link rel="stylesheet" href="/css/header-and-footer.css"/> <link rel="stylesheet" href="/css/forms.css"/> <link rel="stylesheet" href="/css/animation.css"/> <link rel="stylesheet" href="/css/utilities.css"/> <link rel="stylesheet" href="/css/code.css"/> <link rel="stylesheet" href="/css/prism.css"/><!----><!--1ktavcc--><meta data-key="description" name="description" content="Parity's JAM full node implementation, performant ready for the JAM network launch."/> <meta property="og:type" content="article"/> <meta property="og:title" content="PolkaJAM"/> <meta name="twitter:title" content="PolkaJAM"/> <meta property="og:description" content="Parity's JAM full node implementation, performant ready for the JAM network launch."/> <meta name="twitter:description" content="Parity's JAM full node implementation, performant ready for the JAM network launch."/><!----><title>PolkaJAM</title>
+		<!-- You can add global <meta> tags here, but anything not global or dynamic should be a `<svelte:head>` tag on the proper page(s) instead. -->
+	</head>
+	<body>
+		<div id="svelte"><!--[--><!--[--><!--[0--><!--[--><div class="layout"><header><a class="skip-to-content-link" href="#main">Skip to main content</a> <a href="../" class="site-title">whenJAM</a> <nav class="main-nav"><ul><!--[--><li><a href="../project" aria-current="page" class="active"><!---->Projects<!----></a></li><li><a href="../about" aria-current="false"><!---->About<!----></a></li><!--]--></ul><!----> <button aria-pressed="false" class="menu-button" tabindex="-1"><span class="sr-only">Toggle hamburger menu</span> <!--[0--><svg viewBox="0 0 128 128" version="1.1" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M64,48.496l-48.496,-48.496l-15.504,15.504l48.496,48.496l-48.496,48.496l15.504,15.504l48.496,-48.496l48.496,48.496l15.504,-15.504l-48.496,-48.496l48.496,-48.496l-15.504,-15.504l-48.496,48.496Z"></path></svg><!--]--></button><!----></nav><!----> <button aria-pressed="false" class="menu-button" tabindex="0"><span class="sr-only">Toggle hamburger menu</span> <!--[-1--><svg viewBox="0 0 128 128" version="1.1" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g><rect x="0" y="12.48" width="128" height="18.688"></rect></g><g><rect x="0" y="96.832" width="128" height="18.688"></rect></g><g><rect x="0" y="54.656" width="128" height="18.688"></rect></g></svg><!--]--></button><!----></header><!----> <!----><main id="main" tabindex="-1"><!--[--><!--[-1--><!--[--><article class="post"><h1>PolkaJAM</h1> <div class="meta"><!--[0--><span>Updated <time datetime="2026-11-09">09/11/2026</time></span><!--]--> <!--[-1--><!--]--></div> <!--[--><h2 id="abstract"><a aria-hidden="true" tabindex="-1" href="#abstract"><span class="icon icon-link"></span></a>Abstract</h2> <p>The deliverable is <strong>PolkaJAM</strong>, Parity’s full node Rust implementation of JAM. It will implement the Gray
+Paper (GP 1.0) and the JAM networking protocol, and needs to be robust and fast enough to be the only
+implementation running at the initial network launch. The target network is to have ~200 validators
+running ~60–70 cores with a 6-second slot time. In favourable conditions it will accumulate one
+work-package per core every slot, with finality lagging by no more than 2 blocks, and it will serve
+5,000 simultaneously connected light nodes. Nodes must not crash, must keep memory and disk usage
+bounded, must degrade gracefully under load or DoS, and must be safe to restart at once. Alongside
+the node come an <strong>in-browser light node</strong> library and the <strong>testing infrastructure</strong> needed to
+prove all this: stress and byzantine testnets on the Toaster, TART telemetry, and per-subsystem
+randomised and performance test suites. Delivery ends with a public testnet run by non-Parity
+validators and the real network launch.</p> <h2 id="phases--milestones"><a aria-hidden="true" tabindex="-1" href="#phases--milestones"><span class="icon icon-link"></span></a>Phases &amp; Milestones</h2> <h3 id="gray-paper"><a aria-hidden="true" tabindex="-1" href="#gray-paper"><span class="icon icon-link"></span></a>Gray Paper</h3> <ul class="contains-task-list"><li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2026-09</strong>: External 0.8 GP audit complete.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-11</strong>: GP 0.8.1 release. This includes the last major changes outside of the PVM; 0.8.1 to 1.0 should only include minor changes, with the exception of changes to complete the PVM gas model.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-12</strong>: GP 0.9 release. This will include the final changes to the PVM gas model and minor changes to address audit findings.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-12</strong>: External 1.0 GP audit begins.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-01</strong>: External 1.0 GP audit complete.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-01</strong>: GP “1.0” release. No big changes from 0.8.1 and 0.9; most changes should be fixes, in particular in response to the external audit. Assumed not to contain the networking spec, so it may not actually be called 1.0.</li></ul> <h3 id="toaster-tart--stress-testing"><a aria-hidden="true" tabindex="-1" href="#toaster-tart--stress-testing"><span class="icon icon-link"></span></a>Toaster, TART &amp; stress testing</h3> <ul class="contains-task-list"><li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2026-08</strong>: Hardware stress-tested with standard tools (i.e. not PolkaJAM). Stable machines and utilisation level identified.</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2026-09</strong>: Dedicated testnet for JAM stress testing, with parameters matching planned launch params. Restarted daily with the latest version of PolkaJAM, except on weekends where it is left running for at least 2 full days. <ul class="contains-task-list"><li class="task-list-item"><input type="checkbox" disabled=""/> Block time to be changed to 2s when PolkaJAM is ready.</li></ul></li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2026-09</strong>: Stress test automatically run against the stress testnet.</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2026-09</strong>: TART running on the stress testnet, with a basic Grafana frontend, improved over time based on requests from the JAM team. Not a deliverable; it exists only to support development.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-09</strong>: Stress test metrics tracked over time and visible on a dashboard.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-10</strong>: Validator set changes every epoch on the stress testnet.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-11</strong>: Machine with 9175F for PVM performance testing.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-11</strong>: Dedicated testnet for Parachain Service development, with cut-down parameters, restarted weekly with the latest version of PolkaJAM.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-11</strong>: TART instance running against the parachain testnet.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-12</strong>: Daily JAM stress test alternates between the regular stress test and a byzantine stress test, with metrics tracked and displayed separately on the dashboard. The byzantine test should ultimately cover network disruption and useful validator misbehaviours, extended over time.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2027-01</strong>: Light nodes introduced to the stress tests. Light nodes track finality and make small state requests.</li></ul> <h3 id="polkajam"><a aria-hidden="true" tabindex="-1" href="#polkajam"><span class="icon icon-link"></span></a>PolkaJAM</h3> <ul class="contains-task-list"><li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2025-05</strong>: Nightly releases available at <a href="https://github.com/paritytech/polkajam-releases" rel="nofollow">https://github.com/paritytech/polkajam-releases</a>, currently implementing GP 0.6.5.</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2025-06</strong>: GP 0.6.6 implemented.</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2025-07</strong>: GP 0.6.7 implemented</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2025-08</strong>: GP 0.7.0 implemented.</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2025-10</strong>: GP 0.7.1 implemented. GP 0.7.1 in particular combined the Accumulate and On-transfer PVM entry points and added the Registrar service privilege.</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2025-11</strong>: GP 0.7.2 implemented. GP 0.7.2 included a variety of minor fixes.</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2025-12</strong>: Proxy node support. Proxy nodes forward work-package submissions and DA requests to the active validators.</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2026-02</strong>: Auditing subsystem broadly implemented and working.</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2026-05</strong>: Disputes extrinsic construction implemented.</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2026-07</strong>: WebTransport support implemented.</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2026-09</strong>: Warp sync working.</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""/> <strong>2026-10</strong>: GP 0.8.0 implemented. GP 0.8.0 in particular included a new PVM gas model and support for changing the validator set size between epochs.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-11</strong>: PolkaJAM implements GP 0.8.1 and is functionally complete except for BEEFY. It is not expected to meet the reliability or performance requirements at this point.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-11</strong>: BEEFY implemented.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-11</strong>: Performance tests exist for the major subsystems: guaranteeing, availability, auditing, finality, block execution.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2026-12</strong>: 100% capacity stress test runs for 2 days on the Toaster with PolkaJAM validators and chain parameters set as they will be for launch: no node failures, 99% work-package throughput, max 2 blocks finality lag. The planned launch parameters may need adjusting to make this possible.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2027-01</strong>: PolkaJAM implements GP 1.0.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2027-02</strong>: 100% capacity stress test runs as above, with the addition of ~5000 light nodes.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2027-02</strong>: Byzantine stress test stable over 2 days.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>TBD</strong>: External PolkaJAM audit.</li></ul> <h3 id="launch"><a aria-hidden="true" tabindex="-1" href="#launch"><span class="icon icon-link"></span></a>Launch</h3> <ul class="contains-task-list"><li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2027-02</strong>: Public test network with non-Parity validator nodes, running for at least a month prior to the real network launch.</li> <li class="task-list-item"><input type="checkbox" disabled=""/> <strong>2027-03</strong>: Real test network launch.</li></ul><!--]--></article><!--]--><!--]--><!--]--><!----></main><!----> <footer><nav><ul><li><a href="../">Home</a></li></ul></nav> <nav><ul><!--[--><li><a href="../project" aria-current="page" class="active"><!---->Projects<!----></a></li><li><a href="../about" aria-current="false"><!---->About<!----></a></li><!--]--></ul><!----></nav> <p>©2026 whenJAM</p></footer><!----></div><!--]--><!--]--><!--]--><!----> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_yinmxk = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						version: "1794496781407"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					import("../_app/immutable/entry/start.zYH3ZlXE.js").then(async (kit) => {
+						kit.init(__sveltekit_yinmxk);
+						const app = await import("../_app/immutable/entry/app.BWNisnt6.js");
+						kit.start(app, element, {
+							node_ids: [0, 5],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

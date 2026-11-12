@@ -1,0 +1,264 @@
+header,
+footer {
+	font-family: var(--displayFont);
+	padding: 0.75rem 1.5rem;
+}
+
+:where(header, footer) a {
+	text-decoration: none;
+}
+
+:where(header, footer) nav ul {
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0 2rem;
+	padding: 0;
+	margin: 0;
+}
+
+:where(header, footer) nav li {
+	margin: 0;
+}
+
+:where(header, footer) svg {
+	fill: currentColor;
+}
+
+/**
+ * Header — a sticky, translucent bar over the paper, like graypaper.com's.
+ */
+header {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	min-height: var(--header-height);
+	background: rgba(0, 0, 0, 0.13);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border-bottom: 1px solid var(--rule-soft);
+	font-size: 0.75rem;
+	letter-spacing: 0.01em;
+}
+
+.site-title {
+	font-family: var(--displayFont);
+	font-size: 0.8125rem;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0.04em;
+	color: var(--ink-strong);
+	margin: 0;
+	white-space: nowrap;
+}
+
+.site-title:hover {
+	color: var(--accent);
+}
+
+header .main-nav {
+	display: none;
+}
+
+header .main-nav a {
+	color: var(--accent);
+}
+
+header .main-nav a:hover {
+	color: var(--ink-strong);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.25em;
+}
+
+header .main-nav a.active {
+	color: var(--ink-strong);
+	font-weight: 500;
+}
+
+/* Mobile: the nav becomes a full-screen overlay */
+.main-nav {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	transform: translateX(-100vw);
+	visibility: hidden;
+	width: 100%;
+	height: 100vh;
+	pointer-events: none;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--paper-sunk);
+	background-image: url('/images/paper-texture.svg');
+	background-size: 300px 300px;
+	color: var(--ink);
+	transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.main-nav.open {
+	transform: translateX(0);
+	opacity: 1;
+	pointer-events: unset;
+	visibility: unset;
+}
+
+.main-nav.open li {
+	--delay: 0.1s;
+	opacity: 0;
+	animation: slide_in_left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+.main-nav a {
+	color: inherit;
+	font-size: 1rem;
+	letter-spacing: 0.02em;
+}
+
+.main-nav.open ul {
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.main-nav li:nth-of-type(1) {
+	animation-delay: calc(var(--delay) * 1);
+}
+
+.main-nav li:nth-of-type(2) {
+	animation-delay: calc(var(--delay) * 2);
+}
+
+.main-nav li:nth-of-type(3) {
+	animation-delay: calc(var(--delay) * 3);
+}
+
+.main-nav li:nth-of-type(4) {
+	animation-delay: calc(var(--delay) * 4);
+}
+
+.main-nav li:nth-of-type(5) {
+	animation-delay: calc(var(--delay) * 5);
+}
+
+.main-nav li:nth-of-type(6) {
+	animation-delay: calc(var(--delay) * 6);
+}
+
+.main-nav li:nth-of-type(7) {
+	animation-delay: calc(var(--delay) * 7);
+}
+
+.main-nav li:nth-of-type(8) {
+	animation-delay: calc(var(--delay) * 8);
+}
+
+.menu-button {
+	margin: 0;
+	background: transparent !important;
+	color: var(--ink-muted);
+	padding: 0;
+	border: 0;
+	width: 1.5rem;
+	height: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* The starter's SVGs carry only a viewBox, so give them an explicit size */
+.menu-button svg {
+	width: 1.125rem;
+	height: 1.125rem;
+}
+
+.menu-button:hover {
+	color: var(--ink-strong);
+}
+
+@media (min-width: 40rem) {
+	header {
+		justify-content: space-between;
+		padding: 0.75rem 2rem;
+	}
+
+	header .main-nav {
+		display: block;
+		position: static;
+		opacity: 1;
+		transform: none;
+		height: auto;
+		width: auto;
+		background: none;
+		pointer-events: unset;
+		visibility: unset;
+		color: inherit;
+	}
+
+	.menu-button {
+		display: none;
+	}
+}
+
+/* Footer */
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 1rem 2rem;
+	padding: 1.5rem;
+	border-top: 1px solid var(--rule);
+	font-size: 0.6875rem;
+	letter-spacing: 0.04em;
+	color: var(--ink-faint);
+}
+
+footer nav a {
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+footer nav ul {
+	justify-content: flex-start;
+	gap: 0 1.25rem;
+}
+
+footer a {
+	color: var(--ink-muted);
+}
+
+footer a:hover {
+	color: var(--accent);
+}
+
+footer p {
+	margin: 0;
+	font-size: inherit;
+}
+
+.skip-to-content-link {
+	position: absolute;
+	top: -6rem;
+	left: 0;
+	padding: 0.5em;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3rem;
+	background: var(--paper-sunk);
+	color: var(--ink);
+}
+
+.skip-to-content-link:focus {
+	transform: translateY(6rem);
+	opacity: 1;
+	z-index: 11;
+}

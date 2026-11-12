@@ -1,0 +1,77 @@
+form {
+	margin: 2rem 0;
+}
+
+button,
+input[type='submit'] {
+	font-family: var(--displayFont);
+	font-size: 0.75rem;
+	letter-spacing: 0.04em;
+	padding: 0.6rem 1.25rem;
+	background: transparent;
+	color: var(--accent);
+	border: 1px solid var(--accent);
+	border-radius: 0;
+	margin: 2rem 0 0;
+	display: block;
+	width: max-content;
+	cursor: pointer;
+	transition:
+		background 0.15s,
+		color 0.15s;
+}
+
+:where(button, input[type='submit']):where(:hover, :focus) {
+	background: var(--accent);
+	color: var(--paper-sunk);
+}
+
+label,
+fieldset {
+	font-weight: bold;
+	display: inline-block;
+}
+
+fieldset {
+	padding: 0;
+	border: 0;
+}
+
+input,
+textarea,
+select {
+	display: block;
+	font-size: inherit;
+	padding: 0.5rem;
+	color: var(--ink);
+	border: 1px solid var(--rule);
+	border-radius: 0;
+	width: 100%;
+	accent-color: var(--accent);
+	background-color: transparent;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	border-color: var(--accent);
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+	display: initial;
+	width: auto;
+}
+
+:where(input[type='radio'], input[type='checkbox']):not(:checked) + label {
+	font-weight: normal;
+}
+
+.form-section,
+fieldset {
+	margin-top: 1.5rem;
+}
+
+::placeholder {
+	color: var(--ink-faint);
+}

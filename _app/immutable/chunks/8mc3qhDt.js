@@ -1,0 +1,1 @@
+var e=`whenJAM`,t=`Progress reports on JAM, the Join-Accumulate Machine.`,n=[{title:`Projects`,route:`/project`},{title:`About`,route:`/about`}];export{t as n,e as r,n as t};

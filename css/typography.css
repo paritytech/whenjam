@@ -1,0 +1,239 @@
+body {
+	line-height: 1.5;
+}
+
+@media (min-width: 40rem) {
+	body {
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+	}
+}
+
+p {
+	margin: 0 0 1rem;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+	margin: 3rem 0 0.8rem;
+	line-height: 1.2;
+	font-family: var(--displayFont);
+	font-weight: 500;
+	color: var(--ink-strong);
+	text-wrap: balance;
+	letter-spacing: 0.01em;
+}
+
+h1 {
+	font-size: clamp(1.35rem, 1.1rem + 1.2vw, 2.5rem);
+	line-height: 1.25;
+	margin-top: 0;
+	margin-bottom: 1.625rem;
+}
+
+/* Page titles read as the graypaper's centred section headings */
+h1.page-title {
+	font-size: clamp(1.2rem, 1.05rem + 0.7vw, 1.7rem);
+	line-height: 1.3;
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+h2 {
+	font-size: clamp(1.2rem, 1.05rem + 0.7vw, 1.7rem);
+	line-height: 1.3;
+}
+
+h3 {
+	font-size: clamp(1.05rem, 1rem + 0.35vw, 1.25rem);
+	line-height: 1.4;
+}
+
+h4 {
+	font-size: 1.05rem;
+	font-family: var(--primaryFont);
+	font-weight: bold;
+	letter-spacing: 0;
+}
+
+h5 {
+	font-size: 1rem;
+	font-family: var(--primaryFont);
+	font-weight: bold;
+	letter-spacing: 0;
+}
+
+h6 {
+	font-size: 1rem;
+	font-family: var(--primaryFont);
+	font-style: italic;
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+h1 + h2 {
+	margin-top: 1.625rem;
+}
+
+h2 + h3,
+h3 + h4,
+h4 + h5 {
+	margin-top: 0.8rem;
+}
+
+a {
+	color: var(--accent);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.15em;
+	text-decoration-skip-ink: auto;
+}
+
+a:hover {
+	color: var(--ink-strong);
+	text-decoration-thickness: 2px;
+}
+
+strong,
+b {
+	font-weight: bold;
+	color: var(--ink-strong);
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+small {
+	font-size: 0.875em;
+	color: var(--ink-muted);
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid var(--rule);
+	margin: 2.5rem 0;
+}
+
+ul {
+	list-style-type: square;
+	padding-left: 1.5rem;
+	margin: 0 0 1rem;
+}
+
+ol {
+	padding-left: 1.5rem;
+	margin: 0 0 1rem;
+}
+
+ul ul {
+	list-style-type: circle;
+}
+
+li {
+	margin-bottom: 0.25rem;
+}
+
+li::marker {
+	color: var(--ink-muted);
+}
+
+blockquote {
+	margin: 2rem 0;
+	padding: 0 1.5rem;
+	border-left: 2px solid var(--accent);
+	color: var(--ink-muted);
+	font-style: italic;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+figure {
+	margin: 2rem 0;
+}
+
+figcaption {
+	font-size: 0.875rem;
+	color: var(--ink-muted);
+	text-align: center;
+	margin-top: 0.5rem;
+}
+
+/* Long-form prose: justified, first-line-indented paragraphs like the paper */
+.post :where(p) {
+	text-align: justify;
+	hyphens: auto;
+	text-indent: var(--text-indent);
+}
+
+.post :where(h1, h2, h3, h4, h5, h6) + p,
+.post :where(li) p,
+.post :where(blockquote) p,
+.post :where(p.no-indent) {
+	text-indent: 0;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 2rem 0;
+	font-size: 0.95em;
+}
+
+caption {
+	caption-side: bottom;
+	font-size: 0.875rem;
+	color: var(--ink-muted);
+	padding-top: 0.5rem;
+}
+
+th,
+td {
+	padding: 0.4rem 0.75rem;
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 1px solid var(--rule-soft);
+}
+
+thead th {
+	border-bottom: 1.5px solid var(--rule);
+	font-weight: bold;
+	color: var(--ink-strong);
+}
+
+.page-subtitle {
+	display: block;
+	font-family: var(--primaryFont);
+	font-size: 0.875rem;
+	font-weight: normal;
+	letter-spacing: 0;
+	text-transform: none;
+	color: var(--ink-muted);
+	margin-top: 0.5rem;
+}
+
+/* Task lists — ticked items recede: muted and italic, with a green tick */
+.post .task-list-item input[type='checkbox'] {
+	accent-color: var(--progress);
+}
+
+.post .task-list-item:has(> input[type='checkbox']:checked) {
+	color: var(--ink-faint);
+	font-style: italic;
+}
+
+.post .task-list-item:has(> input[type='checkbox']:checked) > strong {
+	color: inherit;
+}
+
+/* A nested item keeps its own state, even under a ticked parent */
+.post .task-list-item:has(> input[type='checkbox']:not(:checked)) {
+	color: var(--ink);
+	font-style: normal;
+}
+
+.post .task-list-item:has(> input[type='checkbox']:not(:checked)) > strong {
+	color: var(--ink-strong);
+}
